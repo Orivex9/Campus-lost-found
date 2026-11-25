@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campus Lost & Found | FoCP CSE-1003</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="topline">IIIT BHOPAL · STUDENT COMMUNITY PROJECT</div>
+  <h1>Campus Lost <span>&</span> Found</h1>
+  <p>A simple place to report lost belongings and help return found items.</p>
+  <div class="student">
+    <div><small>STUDENT NAME</small><strong id="studentName">Ashish Kumar</strong></div>
+    <div><small>SCHOLAR NUMBER</small><strong id="scholarNumber">20U020124</strong></div>
+    <div><small>COURSE</small><strong>FoCP (CSE-1003)</strong></div>
+  </div>
+</header>
+<main>
+  <section class="stats">
+    <div><strong id="totalCount">0</strong><span>Reports</span></div>
+    <div><strong id="lostCount">0</strong><span>Lost</span></div>
+    <div><strong id="foundCount">0</strong><span>Found</span></div>
+  </section>
+  <section class="panel">
+    <div class="section-heading"><div><small>CONTRIBUTE</small><h2>Post an item</h2></div></div>
+    <form id="itemForm">
+      <div class="field"><label for="kind">Report type</label><select id="kind"><option value="Lost">I lost something</option><option value="Found">I found something</option></select></div>
+      <div class="field"><label for="itemName">Item name</label><input id="itemName" maxlength="50" placeholder="e.g. Blue water bottle" required></div>
+      <div class="field"><label for="place">Where was it lost/found?</label><input id="place" maxlength="70" placeholder="e.g. Library, Block A" required></div>
+      <div class="field"><label for="contact">Contact (email or phone)</label><input id="contact" maxlength="80" placeholder="How can someone reach you?" required></div>
+      <div class="field full"><label for="details">Extra details</label><textarea id="details" maxlength="220" rows="3" placeholder="Colour, identifying details, date, etc."></textarea></div>
+      <button type="submit">Publish report <span>→</span></button>
+      <p id="notice" role="status"></p>
+    </form>
+  </section>
+  <section class="reports">
+    <div class="section-heading"><div><small>CAMPUS BOARD</small><h2>Recent reports</h2></div>
+      <div class="filters"><input id="search" placeholder="Search items…"><select id="filter"><option>All</option><option>Lost</option><option>Found</option></select></div>
+    </div>
+    <div id="items" class="item-grid"></div>
+    <p id="empty" class="empty">No reports yet. Add the first one above.</p>
+  </section>
+</main>
+<footer>Built for FoCP (CSE-1003) · Campus Lost & Found</footer>
+<script src="app.js"></script>
+<script src="c-core.js"></script>
+</body></html>
